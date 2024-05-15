@@ -12,8 +12,14 @@
         background-color: yellow;
       }
 
-      li.my-list {
+      li.my-list,
+      #class-div {
         background-color: orange;
+      }
+
+      li.new-list,
+      div#new-div {
+        background-color: blue;
       }
     </style>
   </head>
@@ -63,8 +69,31 @@
           <li class="my-list">I'm inside an li with a class of my-list</li>
         </ul>
       </div>
+      <div id="class-div">Inside my-div</div>
     </fieldset>
 
+    <fieldset>
+      <legend><a id="compound">compound</a></legend>
+      <p>
+        A compound selector allow multiple selector to accept the same rules.
+      </p>
+      <p>Here's how we use class and id to hook an element:</p>
+      <pre><code>class="new-list"</code></pre>
+      <p>Here's how the CSS is applied to the element:</p>
+      <pre><code>li.new-list, div#new-div{
+    background-color:blue;
+}</code></pre>
+
+      <p>Here's what it looks like:</p>
+      <div>
+        <ul>
+          <li class="new-list">I'm inside an li with a class of new-list</li>
+          <li class="new-list">I'm inside an li with a class of new-list</li>
+          <li class="new-list">I'm inside an li with a class of new-list</li>
+        </ul>
+      </div>
+      <div id="new-div">I'm in a div with an id of new-div</div>
+    </fieldset>
     <footer class="page-footer">
       <p>
         <small
